@@ -1,0 +1,6 @@
+import requests
+
+
+req = requests.get("https://0822-49-205-255-33.ngrok-free.app/")
+
+print(req.json())

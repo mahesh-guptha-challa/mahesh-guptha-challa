@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{% block head%}
+Single Post
+{% endblock %}
+{% block body%}
+<p1>{{each_post}}</p1>
+<a href = {% url "allblogs" %}>All Blogs</a>
+<a href = {% url "welcomepage" %}>Welcome Page </a>
+{% endblock %}

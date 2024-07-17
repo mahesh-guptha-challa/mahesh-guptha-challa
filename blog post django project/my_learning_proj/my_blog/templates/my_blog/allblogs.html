@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head %}
+All blogs
+{% endblock %}  
+{% block body%}
+{% for key, value in data.items%}
+    <a href = {% url "eachpost" post_name=key %}>{{key}}</a>
+{% endfor %}
+<a href = {% url "welcomepage" %}>Welcome Page</a>
+<img src = {% static "myblog/images/wallpaper.jpg"%} alt="Girl in a jacket" >
+{% endblock %}

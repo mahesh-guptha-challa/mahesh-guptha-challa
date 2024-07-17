@@ -1,0 +1,27 @@
+Embeeding
+Gema
+Lorra
+Quantiziation
+UNSLOTH
+vertex ai
+langchain
+rag	
+https://aistudio.google.com/app/apikey?_gl=1*1sc1rrk*_ga*MTg1Nzk0MTIzOS4xNzE1NDA0MDky*_ga_P1DBVKWT6V*MTcxNTQwNDA5Mi4xLjEuMTcxNTQwNDY0Ny41Ny4wLjY5MzUwNTEzOA..
+https://console.cloud.google.com/iam-admin/serviceaccounts/details/111554705394228335190/keys?project=optimistic-host-390513&supportedpurview=project
+
+
+workshop github:
+https://github.com/xprilion/gemini-function-calling-workshop/blob/main/GeminiFunctionCalling_Base.ipynb
+
+
+
+
+
+Indian Model:
+Hanooman
+https://blog.google/technology/developers/gemma-open-models/
+
+https://ravidesetty.medium.com/introducing-navarasa-2-0-indic-gemma-7b-2b-instruction-tuned-model-on-15-indian-languages-31f6565b2750
+https://huggingface.co/posts
+Fastest Training Models:
+https://unsloth.ai/

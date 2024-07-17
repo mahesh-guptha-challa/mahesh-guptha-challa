@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block  head %}
+Mahesh Blogs
+{%endblock%}
+{% block body %}
+<p1>Welcome to my blog post</p1>
+<a href = {% url "eachpost" post_name=latestblogs %}>Latest Blogs {{latestblogs}}</a>
+<a href = {% url 'allblogs' %}> Click here for all blogs</a>
+{%endblock%}
