@@ -6,6 +6,9 @@ class Country(models.Model):
     country_name = models.CharField(max_length=100)
     country_code = models.IntegerField()
 
+    class Meta:
+        verbose_name_plural = "Countries"
+
     def __str__(self) -> str:
         return f"{self.country_name} {self.country_code}"
 
@@ -39,7 +42,7 @@ class Book(models.Model):
     slug = models.SlugField(default="", null=False, db_index=True, unique=True)
     # models.CASCADE, models.SET_NULL, models.PROTECT, models.default
     author = models.ForeignKey(Author, on_delete=models.PROTECT, null=True, related_name="books")
-    country_published = models.ManyToManyField(Country)
+    country_published = models.ManyToManyField(Country, related_name="country")
 
     def path_of_the_url(self):  
         return reverse("model_detail", kwargs={"slug": self.slug})
