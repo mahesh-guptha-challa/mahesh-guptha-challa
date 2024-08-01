@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 
 # Create your views here.
@@ -13,9 +13,9 @@ def main(request):
 
 def all_posts(request):
     
-    
+
     return render(request, "my_blog/allblogs.html", {"data" : blogs})
 
 def single_post(request , post_name):
 
-    return render(request, "my_blog/singleblog.html", {"each_post" : blogs[post_name]})
+    return render(request, "my_blog/singleblog.html", {"each_post" : blogs[post_name]}) 

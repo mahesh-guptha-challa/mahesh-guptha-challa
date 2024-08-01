@@ -1,0 +1,10 @@
+{%extends 'base.html' %}
+{%block 'body'%}
+<h1>title:</h>
+<p>{{post.title}}<p>
+<h1>Date:</h1>
+<p>{{post.date}}</p>
+<a href = {% url "authorlink" authorid %}>{{post.author}}<a>
+<a href = {% url "tag"  tagid %}>Tag<a>
+{%endblock%}
+

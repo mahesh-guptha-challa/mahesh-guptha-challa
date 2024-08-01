@@ -1,0 +1,7 @@
+{%extends "base.html"%}
+{%block 'body'%}
+{%for i in posts%}
+<h1>Post Title</h1>
+<a href = {% url "post" i.slug %}>{{i.title}}</a>
+{% endfor %}
+{%endblock%}
