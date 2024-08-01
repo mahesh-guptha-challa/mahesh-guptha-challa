@@ -42,7 +42,11 @@ class Book(models.Model):
     slug = models.SlugField(default="", null=False, db_index=True, unique=True)
     # models.CASCADE, models.SET_NULL, models.PROTECT, models.default
 <<<<<<< HEAD
+<<<<<<< HEAD
     author = models.ForeignKey(Author, on_delete=models.PROTECT, null=True, related_name="books")
+=======
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True, related_name="books")
+>>>>>>> 4ce1f3b5a68f4ce1d50e2a3c4665becacd387238
 =======
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True, related_name="books")
 >>>>>>> 4ce1f3b5a68f4ce1d50e2a3c4665becacd387238
