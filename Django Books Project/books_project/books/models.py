@@ -41,7 +41,11 @@ class Book(models.Model):
     rating = models.IntegerField(default=None)
     slug = models.SlugField(default="", null=False, db_index=True, unique=True)
     # models.CASCADE, models.SET_NULL, models.PROTECT, models.default
+<<<<<<< HEAD
     author = models.ForeignKey(Author, on_delete=models.PROTECT, null=True, related_name="books")
+=======
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True, related_name="books")
+>>>>>>> 4ce1f3b5a68f4ce1d50e2a3c4665becacd387238
     country_published = models.ManyToManyField(Country, related_name="country")
 
     def path_of_the_url(self):  
