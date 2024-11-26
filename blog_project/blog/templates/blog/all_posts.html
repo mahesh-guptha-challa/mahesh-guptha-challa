@@ -1,7 +1,10 @@
 {%extends "base.html"%}
 {%block 'body'%}
 {%for i in posts%}
-<h1>Post Title</h1>
+<h1>{{i.title}}</h1>
 <a href = {% url "post" i.slug %}>{{i.title}}</a>
+{% if i.slug in request.session.read_later %}
+<p>This is your read later</p>
+{% endif %}
 {% endfor %}
 {%endblock%}

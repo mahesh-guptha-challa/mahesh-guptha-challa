@@ -1,0 +1,8 @@
+from rest_framework import serializers
+
+
+class StudentSerializer(serializers.BaseSerializer):
+
+        name = serializers.CharField(max_length=100)
+        age = serializers.IntegerField()
+

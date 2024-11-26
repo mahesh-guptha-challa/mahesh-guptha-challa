@@ -4,7 +4,28 @@
 <p>{{post.title}}<p>
 <h1>Date:</h1>
 <p>{{post.date}}</p>
-<a href = {% url "authorlink" authorid %}>{{post.author}}<a>
-<a href = {% url "tag"  tagid %}>Tag<a>
+<a href = {% url "authorlink" post.author.id %}>{{post.author}}<a>
+{% for i in all_tags %}
+<a href = {% url "tag"  i.id %}>{{i}}<a>
+{% endfor %}    
+{% if post.image_name %}
+<img src="{{ post.image_name.url }}" alt="Post Image">
+{% else %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Submit</button> 
+</form>
+{% endif %}        
+{% if flag %}
+<h1>This is Your Read Later</h1>
+{% else %}
+<form method = "POST" action= "{% url "read_later" %}">
+    {% csrf_token %}
+    <input type="hidden" name="slug" value="{{ post.slug }}">
+    <button type="submit">Read Later</button>
+</form>    
+{% endif %}
+{% for  in  %}{% endfor %}
 {%endblock%}
 

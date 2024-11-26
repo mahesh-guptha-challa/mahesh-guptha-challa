@@ -1,0 +1,10 @@
+{% extends "remarks/base.html" %}
+{% block head %}Remarks{% endblock  %}
+{% block body %}
+<ul>
+    {% comment %} object_list {% endcomment %}
+    {% for each in remarks %}
+    <li><a href = "{% url 'data' each.id %}">{{each}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock  %}

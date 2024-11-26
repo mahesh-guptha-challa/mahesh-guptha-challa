@@ -1,0 +1,13 @@
+{% extends "remarks/base.html" %}
+{% block head %}Data{% endblock  %}
+{% block body %}{{feedback}}
+{% if favourite %}
+<p>This is my favourite feedback </p>
+{% else %}
+<form action = "/reviews/favourite" method = "POST">
+    {% csrf_token %}
+    <input type="hidden" value="{{feedback.id}}" name ="review_id">	
+    <button>Favourite</button>
+</form>
+{% endif %}
+{% endblock  %}
